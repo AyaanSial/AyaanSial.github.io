@@ -86,42 +86,102 @@
       width: 0;
       transition: width 1s ease;
     }
+
+    /* Profile header */
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: var(--accent-2);
+    }
+    header p {
+      margin: .3rem 0;
+      color: var(--muted);
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
+    <!-- Header -->
+    <header>
+      <h1>Ayaan Sial</h1>
+      <p>952 Vernon Ct, Vernon Hills • +1-224-770-1695 • <a href="mailto:ayaansial13@gmail.com">ayaansial13@gmail.com</a></p>
+      <p>Aspiring computer scientist and game developer seeking opportunities to apply my skills in Unreal Engine, Java, and Python toward new creative projects.</p>
+    </header>
+
+    <!-- Education -->
+    <section id="education" class="section-card">
+      <h2>Education</h2>
+      <p><b>Vernon Hills High School</b> — Vernon Hills, Illinois (2026)</p>
+      <ul>
+        <li>Achieved High Honors all four years</li>
+        <li>Wrestled for two years; active in fitness for 4+ years</li>
+        <li>Recipient of the Sugarman Award in sophomore, junior, and senior years</li>
+        <li>Scored 4s and 5s on six AP exams; awarded AP Scholar with Distinction</li>
+        <li>Currently holding a 4.5+ GPA</li>
+      </ul>
+    </section>
+
     <!-- Experience -->
     <section id="experience" class="section-card">
-      <h2 class="section-title">Experience</h2>
+      <h2>Experience</h2>
       <div class="card-list">
         <div class="card">
-          <p><b>Unreal Engine Projects</b>: Shared projects online for public viewing.</p>
+          <h3>Five Guys (Fast Food)</h3>
+          <p>Trained new employees on procedures and best practices. Received an award for exceptional quality and maintenance of food orders.</p>
+        </div>
+        <div class="card">
+          <h3>Unreal Engine Projects</h3>
+          <p>Self-studied Unreal Engine. Developed multiple projects for school and personal interest, and shared online for public viewing.</p>
           <a class="btn" href="https://www.youtube.com/watch?v=AINtejuDVlQ&list=PLj6uioYq6rZiCO0iQiyn08T5JwLff8G75" target="_blank">🎥 Watch on YouTube</a>
         </div>
       </div>
     </section>
 
-    <!-- Language proficiency -->
+    <!-- Additional -->
     <section id="additional" class="section-card">
-      <h2 class="section-title">Languages</h2>
+      <h2>Languages</h2>
       <div class="lang-bars">
         <div class="lang">
           <div class="lang-label"><span>English</span><span>100%</span></div>
           <div class="bar"><div class="bar-fill" style="width:100%"></div></div>
         </div>
         <div class="lang">
-          <div class="lang-label"><span>Hindi</span><span>70%</span></div>
+          <div class="lang-label"><span>Hindi</span><span>60%</span></div>
           <div class="bar"><div class="bar-fill" style="width:70%"></div></div>
         </div>
         <div class="lang">
-          <div class="lang-label"><span>Urdu</span><span>65%</span></div>
+          <div class="lang-label"><span>Urdu</span><span>60%</span></div>
           <div class="bar"><div class="bar-fill" style="width:65%"></div></div>
         </div>
         <div class="lang">
-          <div class="lang-label"><span>French</span><span>60%</span></div>
+          <div class="lang-label"><span>French</span><span>70%</span></div>
           <div class="bar"><div class="bar-fill" style="width:60%"></div></div>
         </div>
       </div>
+
+      <h2 style="margin-top:1.5rem">Technical Skills</h2>
+      <ul>
+        <li>Unreal Engine, Gamemaker, Blender, Davinci Resolve</li>
+        <li>Java (beginner), Python (beginner)</li>
+      </ul>
+
+      <h2 style="margin-top:1.5rem">Volunteer Experience</h2>
+      <ul>
+        <li>Assisted with furniture moving for churches</li>
+        <li>Participated in Feed My Starving Children events</li>
+        <li>Performed yard work for a preschool</li>
+      </ul>
+
+      <h2 style="margin-top:1.5rem">Interests & Hobbies</h2>
+      <ul>
+        <li>Reading, gaming, coding</li>
+        <li>Watching movies</li>
+        <li>Outdoor activities</li>
+      </ul>
     </section>
   </div>
 
