@@ -200,27 +200,150 @@
 
   <!-- PROJECT DEVELOPMENT PAGE -->
   <section id="development" class="section-card">
-    <h2>Project Development</h2>
 
-    <h3>Research & Growth</h3>
-    <p>
-      I researched game design principles, programming structures, and engine documentation to
-      improve both technical skills and creative decision-making.
-    </p>
+    <!-- PROJECT LOGS -->
+<section class="section-card">
+  <h2>Advanced Topics: UE5 Project Logs</h2>
 
-    <h3>Mentorship</h3>
-    <p>
-      My mentor (teacher and online developer resources) guided me by providing feedback,
-      debugging advice, and helping refine my design choices throughout development.
-    </p>
+  <p>
+    These logs document my progress developing a game in Unreal Engine 5.
+    Each entry reflects experimentation, problem-solving, and growth over time.
+  </p>
 
-    <h3>Key Milestones</h3>
-    <ul>
-      <li>First fully playable Unreal Engine prototype</li>
-      <li>Publishing projects publicly on YouTube</li>
-      <li>Transitioning from beginner scripts to structured systems</li>
-    </ul>
-  </section>
+  <h3>September 2025</h3>
+
+  <p><b>9/22/2025</b></p>
+  <p>
+    First day of this project log. I explored Unreal Engine’s landscaping tools,
+    global illumination, fog, and post-processing effects. I began learning the
+    Landmass plugin in a separate map so I could later integrate custom landscapes
+    into my main game level.
+  </p>
+
+  <p><b>9/28/2025</b></p>
+  <p>
+    Continued working with landscaping tools and learned how to use blueprints
+    for predetermined landscape patterns. I added foliage, began modeling directly
+    in Unreal Engine, and started creating materials for custom meshes. These models
+    are intended to become enemies later in development. I also learned how to
+    paint landscape materials such as snow, dirt, and soil.
+  </p>
+
+  <p><b>9/30/2025</b></p>
+  <p>
+    Began learning visual effects using Unreal Engine’s Niagara Emitter system.
+    My goal is to create a dynamic floating VFX system that interacts with the player.
+    To prepare, I revisited older projects for reference.
+  </p>
+
+  <h3>October 2025</h3>
+
+  <p><b>10/1/2025</b></p>
+  <p>
+    Focused on refining the Niagara visual effects. I modified particle patterns
+    and update systems so the emitter functions as a central point with particles
+    orbiting in a circular ring.
+  </p>
+
+  <p><b>10/2/2025</b></p>
+  <p>
+    Edited the Niagara particle material by converting values into parameters.
+    This gave me greater control over the final appearance and behavior of the
+    visual effects system.
+  </p>
+
+  <p><b>10/3/2025</b></p>
+  <p>
+    Reviewed Unreal Engine documentation and implemented a blueprint trigger
+    sphere system. The VFX now spawns when the player collides with the trigger,
+    allowing visuals to react directly to player actions rather than timed events.
+  </p>
+
+  <p><b>10/14/2025</b></p>
+  <p>
+    Began editing enemy pawn animations, improving how the enemy rotates toward
+    the player to make movement appear more natural.
+  </p>
+
+  <p><b>10/20/2025</b></p>
+  <p>
+    Imported a new enemy pawn model and properly set up the mesh in preparation
+    for animation and combat implementation.
+  </p>
+
+  <p><b>10/22/2025</b></p>
+  <p>
+    Attempted to implement an idle → walk → run animation system so the enemy’s
+    movement transitions would appear smoother and more realistic.
+  </p>
+
+  <p><b>10/23/2025</b></p>
+  <p>
+    Began debugging animation issues caused by skeletal mesh incompatibility.
+  </p>
+
+  <p><b>10/24/2025</b></p>
+  <p>
+    Continued debugging the animation system and investigating skeleton issues.
+  </p>
+
+  <p><b>10/26/2025</b></p>
+  <p>
+    Realized the skeleton was incompatible with the animations. I imported a new
+    mesh and implemented the correct systems. The player and enemy can now both
+    attack, though some bugs remain. Planned to fix these and add a damage system.
+  </p>
+
+  <p><b>10/28/2025</b></p>
+  <p>
+    After extensive research and debugging, I implemented a functional combat
+    system. The enemy AI can track and attack the player, dealing damage. The
+    player can also attack using the <b>F</b> key. I added safeguards to prevent
+    attack spamming and converted sprinting into a dodge mechanic using the
+    <b>Shift</b> key. The dodge includes visual effects and brief invincibility frames.
+  </p>
+
+  <h3>November 2025</h3>
+
+  <p><b>11/03/2025</b></p>
+  <p>
+    Began expanding the combat system by experimenting with additional attack
+    types.
+  </p>
+
+  <p><b>11/05/2025</b></p>
+  <p>
+    Continued debugging and refining the multi-attack combat system.
+  </p>
+
+  <p><b>11/07/2025</b></p>
+  <p>
+    Added a post-processing volume to gain more control over the game’s visual
+    style and overall atmosphere.
+  </p>
+
+  <p><b>11/14/2025</b></p>
+  <p>
+    Continued refining the combat system and downloaded two new attack animations
+    to expand player combat options.
+  </p>
+
+  <p><b>11/16/2025</b></p>
+  <p>
+    Remapped the new animations so they correctly align with the player character.
+  </p>
+
+  <h3>January 2026</h3>
+
+  <p><b>1/18/2026</b></p>
+  <p>
+    Reworked blueprints to create a combo attack system following the logic
+    Attack 1 → Attack 2 → Attack 3 → repeat. There is currently a bug where the
+    third attack animation appears incorrect, and I am actively working on fixing it.
+  </p>
+
+</section>
+
 
 </div>
 
