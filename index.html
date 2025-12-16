@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ayaan Sial • Portfolio</title>
-  <meta name="description" content="Portfolio of Ayaan Sial — aspiring computer scientist and game developer with experience in Unreal Engine, Java, and Python." />
+  <meta name="description" content="Portfolio of Ayaan Sial — aspiring computer scientist and game developer." />
+
   <style>
     :root {
       --bg: #0b1020;
@@ -14,9 +15,8 @@
       --muted: #b6c2ff;
       --accent: #7c9cf4;
       --accent-2: #a0e0ff;
-      --chip: #1b2452;
-      --ring: rgba(160, 224, 255, .35);
     }
+
     body {
       margin: 0;
       font-family: system-ui, sans-serif;
@@ -26,47 +26,93 @@
       color: var(--text);
       line-height: 1.6;
     }
+
     a { color: var(--accent-2); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 1rem; }
 
-    /* Button */
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(11,16,32,.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #1d275f;
+      z-index: 10;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      padding: .8rem 1rem;
+      margin: 0;
+      justify-content: center;
+    }
+
+    nav a {
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    nav a:hover {
+      color: var(--accent-2);
+    }
+
+    /* Buttons */
     .btn {
-      appearance: none;
       border: 1px solid #2940a3;
       background: linear-gradient(135deg, #203080, #152050);
       color: var(--text);
       padding: .6rem 1rem;
       border-radius: .8rem;
       cursor: pointer;
-      box-shadow: 0 6px 18px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.05);
-      transition: all 0.25s ease;
       display: inline-block;
-      text-align: center;
+      margin-top: .5rem;
     }
+
     .btn:hover {
       filter: brightness(1.15);
       transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(124,156,244,.4);
     }
-    .btn.ghost { background: transparent; }
 
-    /* Section card */
+    /* Cards */
     .section-card {
       background: linear-gradient(180deg, var(--card), #101736);
       border: 1px solid #1d275f;
       border-radius: 1.25rem;
-      padding: 1.25rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-      margin: 1.5rem 0;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      color: var(--accent-2);
+      margin-bottom: .3rem;
+    }
+
+    header p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: .3rem auto;
     }
 
     /* Language bars */
     .lang-bars { display: flex; flex-direction: column; gap: .8rem; }
-    .lang {
-      display: flex;
-      flex-direction: column;
-      gap: .25rem;
+    .bar { background: #1c275d; height: 10px; border-radius: .5rem; overflow: hidden; }
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
     }
     .lang-label {
       display: flex;
@@ -74,127 +120,109 @@
       font-size: .9rem;
       color: var(--muted);
     }
-    .bar {
-      background: #1c275d;
-      border-radius: .5rem;
-      overflow: hidden;
-      height: 10px;
-    }
-    .bar-fill {
-      background: linear-gradient(90deg, var(--accent), var(--accent-2));
-      height: 100%;
-      width: 0;
-      transition: width 1s ease;
-    }
-
-    /* Profile header */
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: var(--accent-2);
-    }
-    header p {
-      margin: .3rem 0;
-      color: var(--muted);
-    }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <!-- Header -->
+
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#development">Project Development</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+  <!-- HOME PAGE -->
+  <section id="home">
     <header>
       <h1>Ayaan Sial</h1>
-      <p>Based in Vernon Hills • +1-224-770-1695 • <a href="mailto:ayaansial13@gmail.com">ayaansial13@gmail.com</a></p>
-      <p>Aspiring computer scientist and game developer seeking opportunities to apply my skills in <B>GameMaker</B>, <b>Unreal Engine</b>, <b>Java</b> , and <b>Python</b> toward new creative projects.</p>
+      <p>Aspiring computer scientist and game developer with a passion for building interactive experiences.</p>
+      <p>Explore my work, my development process, and the projects I’m most proud of.</p>
+      <a class="btn" href="#projects">View My Projects</a>
     </header>
+  </section>
 
-    <!-- Education -->
-    <section id="education" class="section-card">
-      <h2>Education</h2>
-      <p><b>Vernon Hills High School</b> — Vernon Hills, Illinois (2026)</p>
-      <ul>
-        <li>Achieved High Honors all four years</li>
-        <li>Recipient of the Sugarman Award in sophomore, junior, and senior years</li>
-        <li>Scored 4s and 5s on six AP exams; awarded AP Scholar with Distinction</li>
-        <li>Currently holding a 4.4+ wGPA</li>
-      </ul>
-    </section>
+  <!-- ABOUT ME (ORIGINAL CONTENT) -->
+  <section id="about" class="section-card">
+    <h2>About Me</h2>
+    <p><b>Based in Vernon Hills</b> • +1-224-770-1695 • 
+      <a href="mailto:ayaansial13@gmail.com">ayaansial13@gmail.com</a>
+    </p>
+    <p>
+      Aspiring computer scientist and game developer seeking opportunities to apply my skills in 
+      <b>GameMaker</b>, <b>Unreal Engine</b>, <b>Java</b>, and <b>Python</b> toward new creative projects.
+    </p>
 
-    <!-- Experience -->
-    <section id="experience" class="section-card">
-      <h2>Experience</h2>
-      <div class="card-list">
-        <div class="card">
-          <h3>Computer Science Honors Projects</h3>
-          <p>Made different game projects, with various functionalities with Python during this semester-long course</p>        
-          <h3>AP Computer Science A</h3>
-          <p>Similar to Computer Science honors, I made different projects while learning Java during this course.</p>
-          <h3>Unreal Engine Projects</h3>
-          <p>Self-studied Unreal Engine. Developed multiple projects for school and personal interest, and shared them online for public viewing.</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=AINtejuDVlQ&list=PLj6uioYq6rZiCO0iQiyn08T5JwLff8G75" target="_blank">🎥 Watch on YouTube</a>
-        </div>
-      </div>
-    </section>
+    <h3>Education</h3>
+    <p><b>Vernon Hills High School</b> — Class of 2026</p>
+    <ul>
+      <li>High Honors all four years</li>
+      <li>Sugarman Award (Sophomore–Senior)</li>
+      <li>AP Scholar with Distinction</li>
+      <li>4.4+ weighted GPA</li>
+    </ul>
 
-    <!-- Additional -->
-    <section id="additional" class="section-card">
-      <h2>Languages</h2>
-      <div class="lang-bars">
-        <div class="lang">
-          <div class="lang-label"><span>English</span><span>100%</span></div>
-          <div class="bar"><div class="bar-fill" style="width:100%"></div></div>
-        </div>
-        <div class="lang">
-          <div class="lang-label"><span>Hindi</span><span>70%</span></div>
-          <div class="bar"><div class="bar-fill" style="width:70%"></div></div>
-        </div>
-        <div class="lang">
-          <div class="lang-label"><span>Urdu</span><span>70%</span></div>
-          <div class="bar"><div class="bar-fill" style="width:70%"></div></div>
-        </div>
-        <div class="lang">
-          <div class="lang-label"><span>French</span><span>80%</span></div>
-          <div class="bar"><div class="bar-fill" style="width:80%"></div></div>
-        </div>
-      </div>
+    <h3>Experience</h3>
+    <ul>
+      <li>Computer Science Honors & AP CSA projects in Python and Java</li>
+      <li>Self-studied Unreal Engine with multiple published projects</li>
+    </ul>
 
-      <h2 style="margin-top:1.5rem">Technical Skills</h2>
-      <ul>
-        <li>Unreal Engine, Gamemaker, Blender, Davinci Resolve</li>
-        <li>Java (beginner), Python (beginner)</li>
-      </ul>
+    <a class="btn" href="https://www.youtube.com/watch?v=AINtejuDVlQ&list=PLj6uioYq6rZiCO0iQiyn08T5JwLff8G75" target="_blank">
+      🎥 Unreal Engine Project Playlist
+    </a>
+  </section>
 
-      <h2 style="margin-top:1.5rem">Volunteer Experience</h2>
-      <ul>
-        <li>Assist with furniture moving for churches</li>
-        <li>Participate in Feed My Starving Children events</li>
-        <li>Do additional volunteer work with NHS</li>
-      </ul>
+  <!-- PROJECTS PAGE -->
+  <section id="projects" class="section-card">
+    <h2>Projects</h2>
 
-      <h2 style="margin-top:1.5rem">Interests & Hobbies</h2>
-      <ul>
-        <li>Reading</li>
-        <li>Gaming</li>
-        <li>Coding</li>
-        <li>Watching movies</li>
-        <li>Outdoor activities</li>
-      </ul>
-    </section>
-  </div>
+    <h3>Unreal Engine Game Projects</h3>
+    <p>
+      A collection of game prototypes and mechanics developed in Unreal Engine, focusing on
+      gameplay systems, environments, and interaction.
+    </p>
+    <a class="btn" href="https://www.youtube.com/watch?v=AINtejuDVlQ&list=PLj6uioYq6rZiCO0iQiyn08T5JwLff8G75" target="_blank">
+      Watch Gameplay Videos
+    </a>
 
-  <script>
-    // Animate bars on load
-    window.addEventListener("load", () => {
-      document.querySelectorAll(".bar-fill").forEach(bar => {
-        const width = bar.style.width;
-        bar.style.width = "0";
-        setTimeout(() => { bar.style.width = width; }, 200);
-      });
-    });
-  </script>
+    <h3>Programming Coursework Projects</h3>
+    <p>
+      Python and Java projects created through Computer Science Honors and AP Computer Science A,
+      emphasizing logic, object-oriented programming, and problem-solving.
+    </p>
+  </section>
+
+  <!-- PROJECT DEVELOPMENT PAGE -->
+  <section id="development" class="section-card">
+    <h2>Project Development</h2>
+
+    <h3>Research & Growth</h3>
+    <p>
+      I researched game design principles, programming structures, and engine documentation to
+      improve both technical skills and creative decision-making.
+    </p>
+
+    <h3>Mentorship</h3>
+    <p>
+      My mentor (teacher and online developer resources) guided me by providing feedback,
+      debugging advice, and helping refine my design choices throughout development.
+    </p>
+
+    <h3>Key Milestones</h3>
+    <ul>
+      <li>First fully playable Unreal Engine prototype</li>
+      <li>Publishing projects publicly on YouTube</li>
+      <li>Transitioning from beginner scripts to structured systems</li>
+    </ul>
+  </section>
+
+</div>
+
 </body>
 </html>
